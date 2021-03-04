@@ -1,0 +1,31 @@
+a {
+	color: #245F5F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	font-family: 'Courier New', Courier, monospace;
+	color: #009097;
+}
+
+
+h1, h2 {
+	font-weight: normal;
+	font-family: "Georgia";
+	margin: 3px;
+	padding: 0px;
+}
+
+img {
+	border-style: none;
+	padding: 5px;
+}
+
+ul {
+	padding-left: 10px;
+	margin: 2px 10px 2px 5px;
+}

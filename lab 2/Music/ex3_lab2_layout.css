@@ -1,0 +1,65 @@
+body {
+	background-image: url('background.gif');
+}
+
+img {
+	float: right;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border: 10px solid white;
+	background-image: url('flower.jpg');
+}
+
+.headingsContainer {
+	background-color:#C2E9E9;
+	text-align: right;
+}
+
+.slogan {
+	margin-top: 0.5rem;
+}
+
+.content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.links {
+	background-color: #C2E9E9;
+	border: 3px solid #1e7070;
+	border-radius: 14px;
+	margin: 7px;
+	padding: 4px;
+	height: 30%;
+	flex: 20%;
+	font-weight: bold;
+}
+
+.textContent {
+	flex: 60%;
+}
+
+.paragraph {
+	border-radius: 25px;
+  	border: 2px solid cyan;
+	margin-top: 0.5rem;
+	background-color: #A8F0F0;
+	text-align: justify;
+	padding: 4px;
+}
+
+.date {
+	float: left;
+	border-bottom: 2px dashed #245F5F;
+}
+
+.footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	font-weight: bold;
+}

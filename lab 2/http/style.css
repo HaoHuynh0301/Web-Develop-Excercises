@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 40%;
+    background-color: lightyellow;
+    border: 5px solid darkred;
+    padding: 10px;
+}
+
+.picture {
+    margin: 10px;
+    width: 80%;
+    border-top: 5px inset brown;
+    border-left: 5px inset brown;
+    border-right: 5px inset orange;
+    border-bottom: 5px inset orange;
+}
+
+.paragraph {
+    margin: 10px;
+    width: 80%;
+    max-height: 30%;
+    background-color: lightblue;
+    border: 5px double orange;
+    font-size: 18px;
+    overflow-y: scroll;
+}
+
+
