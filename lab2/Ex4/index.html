@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/elements.css" />
     <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <script src="js/solve.js"></script>
     <title>Exercise 4</title>
 </head>
 <body>
@@ -14,13 +15,16 @@
     </div>
 
     <div class="content">
-        <h3>A = <input type="text" name="a"></h3>
-        <h3>B = <input type="text" name="b"></h3>
-        <h3>C = <input type="text" name="c"></h3>
-        <button>Giải phương trình</button>
-        <hr width=30% align="left">
+        <p><b>A = </b><input type="text" name="a" id="a">&nbsp;<span id="noti_a" ></span></p>
+        <p><b>B = </b><input type="text" name="b" id="b">&nbsp;<span id="noti_b" ></span></p>
+        <p><b>C = </b><input type="text" name="c" id="c">&nbsp;<span id="noti_c" ></span></p>
+        <input id="btn_solve" type="button" value="Giải phương trình" onclick="solve()">
+        <hr width=40% align="left">
         <h1>GIẢI</h1>
-        
+        <p>Delta = <span id="delta"></span></p>
+        <p id="noti_2"></p>
+        <p>x1 = <span id="x1"></span></p>
+        <p>x2 = <span id="x2"></span></p>
     </div>
 </body>
 </html>
