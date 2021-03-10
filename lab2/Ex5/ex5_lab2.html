@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 5</title>
+    <link rel="stylesheet" type="text/css" href="elements.css" />
+    <script src="solve.js"></script>
+</head>
+<body class="main_layout" align="center">
+    <div class="header">
+        <h1>Personal Information</h1>
+    </div>
+
+    <div class="content" align="center">
+        <table id="main_table">
+            <tr>
+                <td><p>Enter name*: </p></td>
+                <td class="td_right"><input type="text" id="txt_name"></td>
+            </tr>
+            <tr>
+                <td>Sex*: </td>
+                <td class="td_right"><input type="radio" id="rd_male" name="gender"><label for="male">Male</label>&emsp;<input type="radio" id="rd_female" name="gender"><label for="female">Female</label></td>
+            </tr>
+            <tr>
+                <td><p>Enter email address*: </p></td>
+                <td class="td_right"><input type="text" id="txt_email"></td>
+            </tr>
+            <tr>
+                <td><p>Enter birthday (MM/DD/YYYY)*: </p></td>
+                <td class="td_right"><input type="text" id="txt_birthday" class="input_1"></td>
+            </tr>
+            <tr>
+                <td><p>Enter street address (line 1)*: </p></td>
+                <td class="td_right"><input type="text" id="txt_address" class="input_2"></td>
+            </tr>
+            <tr>
+                <td><p>Enter city*: </p></td>
+                <td class="td_right"><input type="text" id="txt_city" class="input_2"></td>
+            </tr>
+            <tr>
+                <td><p>Select a region*: </p></td>
+                <td class="td_right">
+                    <select name="region" id="reg">
+                        <optgroup label="Asia">
+                          <option value="VietNam">VietNam</option>
+                          <option value="China">China</option>
+                        </optgroup>
+                        <optgroup label="EU">
+                          <option value="Germany">Germany</option>
+                          <option value="America">America</option>
+                        </optgroup>
+                      </select>
+                </td>
+            </tr>
+            <tr>    
+                <td><p>Enter 5-digit ZIP code*: </p></td>
+                <td class="td_right"><input type="text" id="txt_zip_code" class="input_2"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" id="btn_finish" value="Finished"></td>
+                <td class="td_right"><input class="button" type="button" id="btn_clear" value="Clear" onclick="clear_all()"></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

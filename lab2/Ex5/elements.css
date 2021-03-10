@@ -1,0 +1,24 @@
+h1 {
+    margin-bottom: 30px;
+}
+
+#main_table {
+    text-align: right;
+}
+
+.input_1 {
+    width: 120px;
+}
+
+.td_right {
+    text-align: left;
+}
+
+.button {
+    width: 100px;
+}
+
+.input_2 {
+    width: 100px;
+    text-align: left;
+}
