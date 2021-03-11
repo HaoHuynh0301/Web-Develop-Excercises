@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="elements.css"/>
+    <link type="text/css" rel="stylesheet" href="default.css" id="css_path"/>
     <script src="solve.js"></script>
     <title>Excercise 8</title>
 </head>
 <body class="body_default" id="body">
     <div align="center" class="selection">
         <p>Select theme: 
-            <select name="color_theme" id="theme" class="select" onchange="validateSelectBox(this)">
+            <select name="color_theme" id="theme" class="select" onchange="changecss(this)">
                 <option value="Default">Default</option>
                 <option value="Dark">Dark</option>
                 <option value="Colorfull">Colorfull</option>
@@ -20,35 +20,35 @@
         
     </div>
 
-    <table border="1" align="center" class="table_default" id="table"> 
+    <table border="1" align="center" id="table"> 
         <tr> 
-            <td colspan="3"><input type="text" id="txt_result" class="text_default"/></td> 
+            <td colspan="3"><input type="text" id="txt_result"/></td> 
             <td><input type="button" value="c" onclick="clear_all()" class="Default" class="btn_change"/> </td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="1" onclick="display(1)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="2" onclick="display(2)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="3" onclick="display(3)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="/" onclick="display('/')" class="Default" class="btn_change"/> </td> 
+            <td><input type="button" value="1" onclick="display(1)" class="btn_change"/> </td> 
+            <td><input type="button" value="2" onclick="display(2)" class="btn_change"/> </td> 
+            <td><input type="button" value="3" onclick="display(3)" class="btn_change"/> </td> 
+            <td><input type="button" value="/" onclick="display('/')" class="btn_change"/> </td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="4" onclick="display(4)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="5" onclick="display(5)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="6" onclick="display(6)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="-" onclick="display('-')" class="Default" class="btn_change"/> </td> 
+            <td><input type="button" value="4" onclick="display(4)" class="btn_change"/> </td> 
+            <td><input type="button" value="5" onclick="display(5)" class="btn_change"/> </td> 
+            <td><input type="button" value="6" onclick="display(6)" class="btn_change"/> </td> 
+            <td><input type="button" value="-" onclick="display('-')" class="btn_change"/> </td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="7" onclick="display(7)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="8" onclick="display(8)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="9" onclick="display(9)" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="+" onclick="display('+')" class="Default" class="btn_change"/> </td> 
+            <td><input type="button" value="7" onclick="display(7)" class="btn_change"/> </td> 
+            <td><input type="button" value="8" onclick="display(8)" class="btn_change"/> </td> 
+            <td><input type="button" value="9" onclick="display(9)" class="btn_change"/> </td> 
+            <td><input type="button" value="+" onclick="display('+')" class="btn_change"/> </td> 
         </tr> 
         <tr> 
-            <td><input type="button" value="." onclick="display('.')" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="0" onclick="display(0)" class="Default" class="btn_change"/> </td> 
+            <td><input type="button" value="." onclick="display('.')" class="btn_change"/> </td> 
+            <td><input type="button" value="0" onclick="display(0)" class="btn_change"/> </td> 
             <!-- solve function call function solve to evaluate value -->
-            <td><input type="button" value="=" onclick="solve()" class="Default" class="btn_change"/> </td> 
-            <td><input type="button" value="*" onclick="display('*')" class="Default" class="btn_change"/> </td> 
+            <td><input type="button" value="=" onclick="solve()" class="btn_change"/> </td> 
+            <td><input type="button" value="*" onclick="display('*')" class="btn_change"/> </td> 
         </tr> 
       </table> 
 </body>

@@ -31,6 +31,22 @@ function solve() {
     }
 }
 
+function changecss(obj) {
+    var options = obj.children;
+    var css_path = document.getElementById('css_path');
+    for (var i=0; i<options.length; i++) {
+        if(options[i].selected) {
+            if(i == 0) {
+                css_path.innerHTML = '<link type="text/css" rel="stylesheet" href="default.css" id="css_path"/>'
+            } else if (i == 1) {
+
+            } else if (i == 2) {
+
+            }
+        }
+    }
+}
+
 function validateSelectBox(obj) {
     var table = document.getElementById('table');
     var list_btn = document.getElementsByTagName('input');

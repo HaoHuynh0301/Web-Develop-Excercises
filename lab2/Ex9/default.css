@@ -1,0 +1,38 @@
+.title{ 
+    margin-bottom: 10px; 
+    text-align:center; 
+    width: 210px; 
+    color:green; 
+    border: solid black 2px; 
+    } 
+
+.select {
+        align-items: center;
+    }
+
+.input[type="text"] {
+        height: 70px;
+        background-color: white; 
+        border: solid grey 1px;
+    }
+
+.input[type="button"] {
+    background-color: rgb(224, 224, 224); 
+    color: black; 
+    border: solid black 1px; 
+    width:100% 
+}
+
+#table {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+#body {
+    background-color:white;
+}
+
+.selection {
+        margin-bottom: 10px;
+    }
