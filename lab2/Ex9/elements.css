@@ -1,0 +1,69 @@
+.title{ 
+    margin-bottom: 10px; 
+    text-align:center; 
+    width: 210px; 
+    color:green; 
+    border: solid black 2px; 
+    } 
+
+.select {
+    align-items: center;
+}
+
+.input[type="text"] {
+    height: 70px;
+}
+
+.selection {
+    margin-bottom: 10px;
+}
+
+.Default {
+    background-color: rgb(224, 224, 224); 
+    color: black; 
+    border: solid black 1px; 
+    width:100%  
+}
+
+.Dark {
+    background-color: grey; 
+    color: black; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+.Colorful {
+
+}
+
+.table_default {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.table_dark {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+.table_colorful {
+
+}
+
+.text_default {
+    background-color: white; 
+    border: solid grey 1px;
+}
+
+.text_dark {
+    color: blue;
+    background-color: blue; 
+    border: solid white 1px;
+}
+
+.text_colorful {
+    background-color: blue; 
+    border: solid white 1px;
+}
