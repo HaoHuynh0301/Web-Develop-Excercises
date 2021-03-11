@@ -58,7 +58,7 @@
 }
 
 .text_dark {
-    color: blue;
+    color: white;
     background-color: blue; 
     border: solid white 1px;
 }
@@ -66,4 +66,16 @@
 .text_colorful {
     background-color: blue; 
     border: solid white 1px;
+}
+
+.body_default {
+    background-color:white;
+}
+
+.body_dark {
+    background-color: rgb(194, 192, 192);
+}
+
+.body_colorful {
+
 }

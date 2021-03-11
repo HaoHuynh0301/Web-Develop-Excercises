@@ -33,12 +33,17 @@ function solve() {
 
 function validateSelectBox(obj) {
     var table = document.getElementById('table');
-    var list_btn = document.getElementsByClassName('btn_change');
+    var list_btn = document.getElementsByTagName('input');
+    var body = document.getElementById('body');
     var test_display = document.getElementById("txt_result");
     var options = obj.children;
     for (var i=0; i<options.length; i++) {
         if(options[i].selected) {
             if(i == 0) {
+                body.classList.remove('body_dark');
+                body.classList.remove('body_colorfull');
+                body.classList.add('body_default');
+                
                 table.classList.remove('table_dark');
                 table.classList.add('table_default');
                 
@@ -51,6 +56,10 @@ function validateSelectBox(obj) {
                     list_btn[y].classList.add('Default')
                 }
             } else if (i == 1) {
+                body.classList.remove('body_default');
+                body.classList.remove('body_colorfull');
+                body.classList.add('body_dark');
+
                 table.classList.remove('table_default');
                 table.classList.add('table_dark');
 
