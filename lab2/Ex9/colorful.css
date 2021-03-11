@@ -10,9 +10,130 @@
     align-items: center;
     }
 
+input[value="1"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="2"] {
+    background-color: yellow; 
+    color: blue; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="3"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="4"] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="5"] {
+    background-color: aqua; 
+    color: blue; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="6"] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="7"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="8"] {
+    background-color: yellow; 
+    color: blue; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="9"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="."] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="0"] {
+    background-color: aqua; 
+    color: blue; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="="] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="-"] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="c"] {
+    background-color: rgb(51, 214, 51); 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+
+input[value="*"] {
+    background-color: aqua; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+
+input[value="/"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
+input[value="+"] {
+    background-color: yellow; 
+    color: red; 
+    border: solid white 1px; 
+    width:100% 
+}
+
 #txt_result {
-    color: white;
-    background-color: blue; 
+    color: yellow;
+    background-color: rgb(51, 214, 51); 
     border: solid white 1px;
     height: 30px;
     }
@@ -27,11 +148,11 @@
 #table {
     width: 200px;
     height: 200px;
-    background-color: black;
+    background-color: rgb(94, 94, 224);
 }
 
 #body {
-    background-color: rgb(194, 192, 192);
+    background-color: rgb(245, 218, 182);
 }
 
 .selection {
