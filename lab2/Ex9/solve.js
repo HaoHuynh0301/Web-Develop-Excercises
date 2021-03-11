@@ -37,9 +37,9 @@ function changecss(obj) {
     for (var i=0; i<options.length; i++) {
         if(options[i].selected) {
             if(i == 0) {
-                css_path.innerHTML = '<link type="text/css" rel="stylesheet" href="default.css" id="css_path"/>'
+                css_path.innerHTML = '<link type="text/css" rel="stylesheet" href="default.css" id="css_path"/>';
             } else if (i == 1) {
-
+                css_path.innerHTML = '<link type="text/css" rel="stylesheet" href="dark.css" id="css_path"/>'
             } else if (i == 2) {
 
             }

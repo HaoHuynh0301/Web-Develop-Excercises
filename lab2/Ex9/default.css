@@ -10,17 +10,18 @@
         align-items: center;
     }
 
-.input[type="text"] {
+#txt_result {
         height: 70px;
         background-color: white; 
         border: solid grey 1px;
+        height: 30px;
     }
 
-.input[type="button"] {
+.btn_change {
     background-color: rgb(224, 224, 224); 
     color: black; 
     border: solid black 1px; 
-    width:100% 
+    width: 100%;
 }
 
 #table {
