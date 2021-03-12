@@ -5,7 +5,10 @@
 }
 
 .transition {
-    transition: 0.4s;
     margin-top: 200px;
     opacity: 0;
+}
+
+.card {
+    transition: 0.4s;
 }
