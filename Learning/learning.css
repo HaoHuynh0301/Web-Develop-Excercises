@@ -1,0 +1,11 @@
+#button {
+    align-self: center;
+    width: 100px;
+    height: 50px;
+}
+
+.transition {
+    transition: 0.4s;
+    margin-top: 200px;
+    opacity: 0;
+}
