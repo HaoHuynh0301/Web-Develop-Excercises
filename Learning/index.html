@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <script language="php" ></script>
     <title>Document</title>
 </head>
 <body>
     <div>
-        <form action="" method="GET">
-            <p>Name: <input type="text" placeholder="your name"></p>
-            <p>Age: <input type="text" placeholder="your name"></p>
+        <form action="backend.php" method="GET">
+            <p>Name: <input type="text" placeholder="your name" name="name"></p>
+            <p>Age: <input type="text" placeholder="your name" name="age"></p>
+            <input type="submit" value="send">
         </form>
     </div>
 </body>
