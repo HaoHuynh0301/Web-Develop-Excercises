@@ -1,0 +1,10 @@
+--The loai: ma_tloai, ten_tloai
+
+1, "Nhạc trẻ"
+2, "Nhạc trữ tình"
+3, "Nhạc cách mạng"
+4, "Nhạc thiếu nhi"
+5, "Nhạc quê hương"
+6, "POP"
+7, "Rock"
+8, "R&B"
