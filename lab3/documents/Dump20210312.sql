@@ -23,16 +23,18 @@ DROP TABLE IF EXISTS `baiviet`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `baiviet` (
-  `ma_bviet` int unsigned NOT NULL DEFAULT (NULL),
-  `tieude` varchar(200) NOT NULL DEFAULT (NULL),
-  `ten_bhat` varchar(100) NOT NULL DEFAULT (NULL),
-  `ma_tloai` int unsigned NOT NULL DEFAULT (NULL),
-  `tomtat` varchar(500) NOT NULL DEFAULT (NULL),
-  `baiviet` varchar(2000) DEFAULT (NULL),
-  `ma_tgia` int unsigned NOT NULL DEFAULT (NULL),
-  `ngayviet` date NOT NULL DEFAULT (NULL),
-  `image` longblob DEFAULT (NULL),
-  PRIMARY KEY (`ma_bviet`)
+  `ma_bviet` int unsigned NOT NULL,
+  `tieude` varchar(200) NOT NULL,
+  `ten_bhat` varchar(100) NOT NULL,
+  `ma_tloai` int unsigned NOT NULL,
+  `tomtat` varchar(500) NOT NULL,
+  `baiviet` varchar(2000),
+  `ma_tgia` int NOT NULL,
+  `ngayviet` date NOT NULL,
+  `image` longblob,
+  PRIMARY KEY (`ma_bviet`),
+  FOREIGN KEY (ma_tgia) REFERENCES tacgia(ma_tgia),
+  FOREIGN KEY (ma_tloai) REFERENCES theloai(ma_tloai)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,8 +56,8 @@ DROP TABLE IF EXISTS `tacgia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tacgia` (
-  `ma_tgia` int NOT NULL DEFAULT (NULL),
-  `ten_tgia` varchar(100) NOT NULL DEFAULT (NULL),
+  `ma_tgia` int NOT NULL,
+  `ten_tgia` varchar(100) NOT NULL,
   `hinh` longblob DEFAULT (NULL),
   PRIMARY KEY (`ma_tgia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -79,8 +81,8 @@ DROP TABLE IF EXISTS `theloai`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `theloai` (
-  `ma_tloai` int unsigned NOT NULL DEFAULT (NULL),
-  `ten_tloai` varchar(30) NOT NULL DEFAULT (NULL),
+  `ma_tloai` int unsigned NOT NULL,
+  `ten_tloai` varchar(30) NOT NULL,
   PRIMARY KEY (`ma_tloai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
