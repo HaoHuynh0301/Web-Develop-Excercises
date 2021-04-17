@@ -16,7 +16,7 @@
 	
 	if(mysqli_num_rows($res) > 0) {
 		while($row = mysqli_fetch_assoc($res)) {
-			$tmp_name = $row["name"];
+			$tmp_name = $row["name"];	
 		}
 	} else echo "No Data";
 ?>
@@ -28,7 +28,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<title>Document</title>
+	<title>Lab3_Exercise 3</title>
 </head>
 <body>
 	<form action="site.php" method="POST" name="login">
