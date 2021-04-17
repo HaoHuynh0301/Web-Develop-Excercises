@@ -16,6 +16,7 @@
     if (isset($_POST['btn-search'])) {
         if (!empty($_POST['txt-search'])) {
             $displayFlag = TRUE;
+            $searchingValue = $_POST['txt-search'];
         }
     }
 ?>
@@ -63,7 +64,7 @@
     <div class="contaner">
         <div class="div-title"><h1><strong>DANH SÁCH BÀI VIẾT</strong></div><hr/>
         <form action="searching.php" method="POST" class="form-search">
-            <input name="txt-search" type="text" class="text-input" value="<?php $_POST["txt-search"] ?>"/>
+            <input name="txt-search" type="text" class="text-input" value="<?php echo $searchingValue ?>"/>
             <input name="btn-search" type="submit" class="btn-search" value="Tìm kiếm"/>
         </form>
         
@@ -77,36 +78,43 @@
                         $resSearching = $conn->query($sql);
                         if ($resSearching->num_rows > 0) {
                             while($row = $resSearching->fetch_assoc()) {
-                                $ma_tgia = $row['ma_tgia'];
-                                $ma_tloai = $row['ma_tloai'];
-                                $sql_gettg = "SELECT * from tacgia where ma_tgia = '$ma_tgia'";
-                                $sql_gettheloai = "SELECT * from theloai where ma_tloai = '$ma_tloai'";
-                                $resultTenTgia = $conn -> query($sql_gettg);
-                                $resultTheLoai = $conn -> query($sql_gettheloai);
-                                echo "        
-                                    <table>
-                                        <tr>
-                                            <td class='row-label'>
-                                                <p>Mã bài viết: </p>
-                                                <p>Tiêu đề: </p>
-                                                <p>Tác giả: </p>
-                                                <p>Ngày viết: </p>
-                                                <p>Bài hát: </p>
-                                                <p>Thể loại: </p>
-                                                <p>Tóm tắt: </p>
-                                            </td>
-                                            <td>
-                                                <p>" . $row['ma_bviet'] . "</p>
-                                                <p>" .$row['tieude'] . "</p>
-                                                <p>" .$resultTenTgia->fetch_assoc()['ten_tgia']. "</p>
-                                                <p>" . $row['ngayviet'] . "</p>
-                                                <p>" . $resultTheLoai->fetch_assoc()['ten_tloai'] . "</p>
-                                                <p>" . $row['ngayviet'] . "</p>
-                                                <p class='txt-content'>" . $row['tomtat'] . "</p>
-                                            </td>
-                                        </tr>
-                                    </table><hr/>
-                                    ";
+                                $existFlag = TRUE;
+                                for($i=0; $i<sizeof($arrExist); $i++) {
+                                    if ($arrExist[$i] == $row['ma_bviet']) $existFlag = FALSE;
+                                }
+                                if ($existFlag == TRUE) {
+                                    array_push($arrExist, $row['ma_bviet']);
+                                    $ma_tgia = $row['ma_tgia'];
+                                    $ma_tloai = $row['ma_tloai'];
+                                    $sql_gettg = "SELECT * from tacgia where ma_tgia = '$ma_tgia'";
+                                    $sql_gettheloai = "SELECT * from theloai where ma_tloai = '$ma_tloai'";
+                                    $resultTenTgia = $conn -> query($sql_gettg);
+                                    $resultTheLoai = $conn -> query($sql_gettheloai);
+                                    echo "        
+                                        <table>
+                                            <tr>
+                                                <td class='row-label'>
+                                                    <p>Mã bài viết: </p>
+                                                    <p>Tiêu đề: </p>
+                                                    <p>Tác giả: </p>
+                                                    <p>Ngày viết: </p>
+                                                    <p>Bài hát: </p>
+                                                    <p>Thể loại: </p>
+                                                    <p>Tóm tắt: </p>
+                                                </td>
+                                                <td>
+                                                    <p>" . $row['ma_bviet'] . "</p>
+                                                    <p>" .$row['tieude'] . "</p>
+                                                    <p>" .$resultTenTgia->fetch_assoc()['ten_tgia']. "</p>
+                                                    <p>" . $row['ngayviet'] . "</p>
+                                                    <p>" . $resultTheLoai->fetch_assoc()['ten_tloai'] . "</p>
+                                                    <p>" . $row['ngayviet'] . "</p>
+                                                    <p class='txt-content'>" . $row['tomtat'] . "</p>
+                                                </td>
+                                            </tr>
+                                        </table><hr/>
+                                        ";
+                                }
                             }
                         }
                     }
