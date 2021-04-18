@@ -12,7 +12,17 @@
     } 
 
     if (isset($_POST['add'])) {
-        
+        if (!empty($_POST['tieude']) || !empty($_POST['ma_tgia']) || !empty($_POST['baihat']) || !empty($_POST['ma_tloai'])) {
+            echo "Done";
+        }
+    }
+
+    function getMaxValue($conn) {
+        $sql = "SELECT MAX(ma_bviet) AS max from baiviet";
+        $resGetMax = $conn->query($sql);
+        if($resGetMax->num_rows > 0) {
+            echo $resGetMax->fetch_assoc()['max'];
+        }
     }
 ?>
 
@@ -38,6 +48,7 @@
         .text-input {
             border: solid 1px;
             height: 20px;
+            font-size: 15px;
         }
 
         .div-text-note {
@@ -64,7 +75,7 @@
                 <table class="table-insert-form">
                     <tr>
                         <td class="table-td div-text-note"><label class="text-note" for="ma_bviet">Mã bài viết</label></td>
-                        <td class="table-td div-text-input"><input class="text-input" id="ma_bviet" name="ma_bviet" type="text" style="width: 75px;"></td>
+                        <td class="table-td div-text-input"><input class="text-input" value="<?php getMaxValue($conn) ?>" id="ma_bviet" name="ma_bviet" type="text" style="width: 75px;"></td>
                     </tr>
 
                     <tr>
