@@ -18,11 +18,13 @@
             $displayFlag = TRUE;
             $searchingValue = $_POST['txt-search'];
         }
+    } 
+
+    if (isset($_POST['flagDelete'])) {
+        echo $_POST['flagDelete'];
     }
     
-    if (isset($_GET['delete'])) {
-        echo $_GET['hidden'];
-    }
+    // echo $flags;
 
     function searchSong($conn, $displayFlag, $searchingValue) {
         if($displayFlag == TRUE) {
@@ -67,8 +69,7 @@
                                             <p>" . $resultTheLoai->fetch_assoc()['ten_tloai'] . "</p>
                                             <p>" . $row['ngayviet'] . "</p>
                                             <p class='txt-content'>" . $row['tomtat'] . "</p>
-                                            <form class='form-delete-song' method='GET' action='Ex2.php'>
-                                                <input name='delete' type='submit' value='Xoá' id='echo ('$ma_bviet')'>
+                                                <input name='delete' onclick='deleteSong()' type='submit' value='Xoá' id='echo ('$ma_bviet')'>
                                                 <input type='hidden' name='hidden' value='$ma_bviet'>
                                             </form>
                                         </td>
@@ -134,11 +135,21 @@
             <input name="btn-search" type="submit" class="btn-search" value="Tìm kiếm"/>
         </form>
         
-        <div class="content">
+        <div class="content" id="content">
             <?php
                 searchSong($conn, $displayFlag, $searchingValue);
             ?>
         </div>
     </div>
+
+<script>
+    function deleteSong() {
+        console.log("click")
+        var flagDelete = false
+        if (confirm("Bạn có chắc chắn muốn xoá bài viết này")) {
+            return true
+        } else return false
+    }
+</script>
 </body>
 </html>
