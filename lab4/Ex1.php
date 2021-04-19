@@ -11,18 +11,34 @@
         die("Connection failed: " . $conn->connect_error);
     } 
 
-    if (isset($_POST['add'])) {
-        if (!empty($_POST['tieude']) || !empty($_POST['ma_tgia']) || !empty($_POST['baihat']) || !empty($_POST['ma_tloai'])) {
-            echo "Done";
-        }
-    }
-
     function getMaxValue($conn) {
         $sql = "SELECT MAX(ma_bviet) AS max from baiviet";
         $resGetMax = $conn->query($sql);
         if($resGetMax->num_rows > 0) {
             echo $resGetMax->fetch_assoc()['max'];
         }
+    }
+
+    if (isset($_POST['add'])) {
+        if (!empty($_POST['tieude']) || !empty($_POST['ma_tgia']) || !empty($_POST['baihat']) || !empty($_POST['ma_tloai'])) {
+            $sql = "SELECT MAX(ma_bviet) AS max from baiviet";
+            $resGetMax = $conn->query($sql);
+            $ma_bviet = $resGetMax->fetch_assoc()['max'] + 1;
+            $tieude = $_POST['tieude'];
+            $ma_tgia = $_POST['ma_tgia'];
+            $ngayviet = date("Y-m-d");
+            $ten_bhat = $_POST['ten_bhat'];
+            $ma_tloai = $_POST['ma_tloai'];
+            $tomtat = $_POST['tomtat'];
+            
+            $sqlAdd = "INSERT into baiviet(ma_bviet, tieude, ma_tgia, ngayviet, ten_bhat, ma_tloai, tomtat) 
+            VALUES ('$ma_bviet', '$tieude', '$ma_tgia', '$ngayviet', '$ten_bhat', '$ma_tloai', '$tomtat')";
+
+            $resAdd = $conn->query($sqlAdd);
+
+            if($resAdd === TRUE) echo "Done";
+            else echo "Error";
+        } 
     }
 ?>
 
